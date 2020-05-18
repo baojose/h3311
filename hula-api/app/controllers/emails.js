@@ -3,13 +3,13 @@
 
 
 exports.sendMail = function(to, subject, body) {
-	var helper = require('sendgrid').mail;
-	var fromEmail = new helper.Email('no-reply@hula.trading', 'Hula Trading');
+	var helper = require('xxx').mail;
+	var fromEmail = new helper.Email('xxx', 'xxx');
 	var toEmail = new helper.Email(to);
 	var content = new helper.Content('text/html', body);
 	var mail = new helper.Mail(fromEmail, subject, toEmail, content);
 	
-	var sg = require('sendgrid')('SENGRID-API-KEY');
+	var sg = require('xxx')('xxxx');
 	var request = sg.emptyRequest({
 	  method: 'POST',
 	  path: '/v3/mail/send',
